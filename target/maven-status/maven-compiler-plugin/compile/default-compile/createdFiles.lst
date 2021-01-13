@@ -1,0 +1,8 @@
+com\dariojolo\app\productos\services\ProductService.class
+com\dariojolo\app\productos\entities\PreciosValidos.class
+com\dariojolo\app\productos\entities\Producto.class
+com\dariojolo\app\productos\services\ProductServiceImpl.class
+com\dariojolo\app\productos\controller\ProductController.class
+com\dariojolo\app\productos\entities\Producto$ProductoBuilder.class
+com\dariojolo\app\productos\DTOs\ProductRepository.class
+com\dariojolo\app\productos\ServicioProductosApplication.class
