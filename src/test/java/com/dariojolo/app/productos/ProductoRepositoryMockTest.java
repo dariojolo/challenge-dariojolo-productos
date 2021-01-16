@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @DataJpaTest
 public class ProductoRepositoryMockTest {
+
     @Autowired
     private ProductRepository productRepository;
 
@@ -30,5 +31,27 @@ public class ProductoRepositoryMockTest {
             producto = found.get();
         }
         Assertions.assertThat(producto.getPrecioMaximo()).isEqualTo(100d);
+    }
+
+    @Test
+    public void whenFindPrecioMinimo_thenReturnPrecioMinimo() {
+        Producto p1 = Producto.builder()
+                .modelo("Sedan")
+                .precioMinimo(1d)
+                .precioMaximo(100d)
+                .build();
+        productRepository.save(p1);
+
+        Double precioMinimo = productRepository.findPrecioMinimoByModelo("Sedan");
+
+        Assertions.assertThat(productRepository.findPrecioMinimoByModelo("Sedan")).isEqualTo(precioMinimo);
+    }
+
+    @Test
+    public void whenFindPrecioMaximo_thenReturnPrecioMaximo() {
+
+        Double precioMaximo = productRepository.findPrecioMaximoByModelo("Sedan");
+
+        Assertions.assertThat(productRepository.findPrecioMaximoByModelo("Sedan")).isEqualTo(precioMaximo);
     }
 }
