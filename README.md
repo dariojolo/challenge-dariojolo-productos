@@ -1,14 +1,14 @@
 # challenge-sysone-productos
-La solución propuesta cuenta con dos servicios, el servicio servicio-productos, es el encargado de manejar los vehiculos que salen de fabrica y que estan disponibles para la venta en los puntos de venta.
+La solución propuesta cuenta con dos servicios, el servicio servicio-productos, es el encargado de manejar los vehículos que salen de fábrica y que están disponibles para la venta en los puntos de venta.
 
 &nbsp;
-Para cumplir con el proposito expone una API Rest con los siguientes métodos y se ha deplyado en la nube con el servicio de ***Heroku***
+Para cumplir con el propósito expone una API Rest con los siguientes métodos y se ha deployado en la nube con el servicio de ***Heroku***
 
 &nbsp;
 Si lo ejecutamos localmente el servicio va a escuchar en el puerto :8081
 
 &nbsp;
-Cuando el Servicio levanta ejecuta un script SQL para poblar la base de datos (H2) utilizada para la solucion con los vehiculos disponibles para la venta segun el relevamiento
+Cuando el servicio inicia se ejecuta un script SQL para poblar la base de datos (H2) utilizada para la solución con los vehículos disponibles para la venta según el relevamiento
 
 &nbsp;
 ***Obtener un listado de los productos disponibles***
@@ -64,7 +64,7 @@ Para crear un nuevo producto para la venta debemos llamar al siguiente método c
 ```
 https://servicio-productos.herokuapp.com/api/products
 ```
-Debemos pasarle como parametro un objeto JSON con el siguiente formato
+Debemos pasarle como parámetro un objeto JSON con el siguiente formato
 ```
  {
     "modelo": "SUV",
@@ -84,11 +84,11 @@ Y obtendremos como respuesta un objeto JSON con el registro creado
 ***Actualizar un producto***
 
 &nbsp;
-Para actualiozar un producto debemos llamar al siguiente método con el verbo PUT y pasandole como parametro el ID del vehiculo a modificar
+Para actualizar un producto debemos llamar al siguiente método con el verbo PUT y pasandole como parametro el ID del vehículo a modificar
 ```
 https://servicio-productos.herokuapp.com/api/products/4
 ```
-y un objeto con los nuevos valores, teniendo en cuenta que solo se puede modificar el precio minimo y el precio maxima (actualizacion parcial)
+y un objeto con los nuevos valores, teniendo en cuenta que solo se puede modificar el precio mínimo y el precio máximo (actualización parcial)
 
 ```
 {
@@ -108,7 +108,7 @@ Y obtendremos como resultado el objeto modificado
 ***Eliminar un producto***
 
 &nbsp;
-Para eliminar un producto, debemos llamar al siguiente método con el verbo DELETE Y pasando como parametro el ID del producto a eliminar
+Para eliminar un producto, debemos llamar al siguiente método con el verbo DELETE Y pasando como parámetro el ID del producto a eliminar
 ```
 https://servicio-productos.herokuapp.com/api/products/3
 ```
