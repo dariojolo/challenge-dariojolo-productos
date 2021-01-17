@@ -5,6 +5,9 @@ La solución propuesta cuenta con dos servicios, el servicio servicio-productos,
 Para cumplir con el proposito expone una API Rest con los siguientes métodos y se ha deplyado en la nube con el servicio de ***Heroku***
 
 &nbsp;
+Si lo ejecutamos localmente el servicio va a escuchar en el puerto :8081
+
+&nbsp;
 Cuando el Servicio levanta ejecuta un script SQL para poblar la base de datos (H2) utilizada para la solucion con los vehiculos disponibles para la venta segun el relevamiento
 
 &nbsp;
